@@ -3,6 +3,7 @@
 {%  block content %}
 <div class="container mt-3">
     <ul>
+        <li><strong>Statut :</strong> {{patient.get_statut_display}} - {{patient.get_statut_compl_display}}</li>
         <li><strong>Civilité :</strong> {{patient.get_civilite_display}}</li>
         <li><strong>Nom de naissance :</strong> {{patient.birth_lname}}</li>
         <li><strong>Prénom(s) de naissance :</strong> {{patient.birth_fnames}}</li>
@@ -11,9 +12,5 @@
         <li><strong>Nom utilisé :</strong> {{patient.used_lname}}</li>
         <li><strong>Prénom utilisé :</strong> {{patient.used_fname}}</li>
     </ul>
-    
-    
-    
-
 </div>
 {% endblock content %}

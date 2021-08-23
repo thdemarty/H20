@@ -28,6 +28,8 @@ class Utilisateur(AbstractUser):
     pass
 
 class Patient(models.Model):
+    statut = models.CharField(max_length=1, choices=STATUT_CHOICES, verbose_name="Statut d'identité")
+    statut_compl = models.CharField(max_length=1, choices=STATUT_COMPL_CHOICES, blank=True, verbose_name="Statut d'identité complémentaire")
     ins = models.CharField(max_length=15, verbose_name="Matricule INS")
     oid = models.CharField(max_length=20, verbose_name="Object identifier")
     # Identité secondaire
