@@ -1,0 +1,19 @@
+{% extends "dashboard.html" %}
+
+{%  block content %}
+<div class="container mt-3">
+    <ul>
+        <li><strong>Civilité :</strong> {{patient.get_civilite_display}}</li>
+        <li><strong>Nom de naissance :</strong> {{patient.birth_lname}}</li>
+        <li><strong>Prénom(s) de naissance :</strong> {{patient.birth_fnames}}</li>
+        <li><strong>Date de Naissance :</strong> {{patient.birth_date}}</li>
+        <li><strong>Commune de naissance (Code INSEE) :</strong> {{patient.get_commune}} ({{patient.birth_insee}})</li>
+        <li><strong>Nom utilisé :</strong> {{patient.used_lname}}</li>
+        <li><strong>Prénom utilisé :</strong> {{patient.used_fname}}</li>
+    </ul>
+    
+    
+    
+
+</div>
+{% endblock content %}

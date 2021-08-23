@@ -1,0 +1,36 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+<div class="container mt-3">
+    <form action="" method="get">
+        <div class="row">
+            <div class="col-3 mb-3">
+                <label for="ins">Matricule INS</label>
+                <input type="text" name="ins" id="ins" class="form-control">
+            </div>
+
+            <div class="col-3 mb-3">
+                <label for="birth_lname">Nom de naissance</label>
+                <input type="text" name="birth_lname" class="form-control">
+            </div>
+            <div class="col-3 mb-3">
+                <label for="birth_fname">Prénom(s) de naissance</label>
+                <input type="text" name="birth_fname" id="birth_fname" class="form-control">
+            </div>
+            <div class="col-3 mb-3 my-auto">
+                <button class="btn btn-primary w-100">Rechercher</button>
+            </div>
+        </div>
+        <hr>
+        Résultats de recherche
+        <ul>
+
+        
+        {% for res in results %}
+        <li><a href="{{res.get_absolute_url}}">{{res}}</a></li>
+        {% endfor %}
+        </ul>
+    </form>
+</div>
+
+{% endblock content %}
